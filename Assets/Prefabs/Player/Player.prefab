@@ -449,9 +449,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 582149d3e22f4cd46b85cbc6c51c0b31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
-  xRange: 10
-  projectilePrefab: {fileID: 0}
+  playerParentTransform: {fileID: 0}
+  speed: 10
+  xRange: 20
+  projectilePrefab: {fileID: 3557638028054942784, guid: 3a1563246f321734dbae5bae2560cdc6, type: 3}
+  bulletPoolingTransform: {fileID: 0}
   maxBulletCount: 10
   bulletRegenerateCooldown: 1
 --- !u!1 &712394435731822089
