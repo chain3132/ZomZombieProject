@@ -6,14 +6,17 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Game/Game.unity
-    guid: f0196d95ff9244ffaa65879ba7824fd4
+    path: Assets/Scenes/SelectLevel.unity
+    guid: da57c7c54b4487548b2fbf7be2ac7453
   - enabled: 1
-    path: Assets/Scenes/Singleton/Singleton01.unity
-    guid: 502cf6ecd05833443ab7f8453a06a8e7
+    path: Assets/Scenes/Level1.unity
+    guid: 5ad2280c0aae4304882bbb75600910bd
   - enabled: 1
-    path: Assets/Scenes/Singleton/Singleton02.unity
-    guid: 4285ed8f8c2181a469740265ec4bb78d
+    path: Assets/Scenes/Level2.unity
+    guid: 7100937fcff19bb49a5b3140b08ca668
+  - enabled: 1
+    path: Assets/Scenes/Level3.unity
+    guid: e6bc595af30f77047bff9447d6f65446
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 289c1b55c9541489481df5cc06664110, type: 3}
   m_UseUCBPForAssetBundles: 0
