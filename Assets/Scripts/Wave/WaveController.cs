@@ -34,13 +34,12 @@ public class WaveController : MonoBehaviour
 
     void SpawnEnemy()
     {
-        int enemyIndex = Random.Range(0, currentWave.enemyPrefabs.Length);
+        int tagIndex = Random.Range(0, currentWave.enemyTags.Length);
         int spawnIndex = Random.Range(0, spawnPoints.Length);
 
-        GameObject enemy = Instantiate(
-            currentWave.enemyPrefabs[enemyIndex],
-            spawnPoints[spawnIndex].position,
-            spawnPoints[spawnIndex].rotation
-        );
+        enemyTags selectedTag = currentWave.enemyTags[tagIndex];
+        Transform spawnPoint = spawnPoints[spawnIndex];
+
+        GameObject enemy = EnemyObjectPool.Instance.SpawnFromPool(selectedTag, spawnPoint.position, spawnPoint.rotation);
     }
 }
