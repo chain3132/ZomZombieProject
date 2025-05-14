@@ -747,7 +747,7 @@ MonoBehaviour:
     enemyCount: 30
     spawnInterval: 1
     waveInterval: 22
-  - enemyTags: 030000000400000005000000
+  - enemyTags: 0300000004000000
     enemyCount: 30
     spawnInterval: 1
     waveInterval: 22

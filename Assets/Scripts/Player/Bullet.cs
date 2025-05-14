@@ -10,6 +10,6 @@ public class Bullet : MonoBehaviour
         {
             health.TakeDamage(attackPoint);
         }
-        Destroy(gameObject);
+        gameObject.SetActive(false);
     }
 }
