@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -14,7 +15,9 @@ public class PlayerController : MonoBehaviour
     public Transform bulletPoolingTransform;
     public int maxBulletCount = 10;
     public float bulletRegenerateCooldown = 1f;
-    
+    public Image[] bulletImage;
+    public Sprite bulletOriginalImage;
+    public Sprite bulletShadowImage;
     #endregion
     
     #region field
@@ -98,6 +101,7 @@ public class PlayerController : MonoBehaviour
             animator.SetTrigger("isShooting");
             Instantiate(projectilePrefab, transform.position + Vector3.forward* 1.5f, transform.rotation,bulletPoolingTransform);
             regenCooldownTimer = bulletRegenerateCooldown;
+            UpdateBulletImage();
         }
 
         if (remainingBulletCount <= 0)
@@ -106,10 +110,25 @@ public class PlayerController : MonoBehaviour
             if (regenCooldownTimer <= 0)
             {
                 remainingBulletCount = maxBulletCount;
+                UpdateBulletImage();
             }
         }
     }
-    
+    private void UpdateBulletImage()
+    {
+        for (int i = 0; i < bulletImage.Length; i++)
+        {
+            if (i < remainingBulletCount)
+            {
+                // Bullet available → show real bullet
+                bulletImage[i].sprite = bulletOriginalImage; // Optional: assign a specific sprite if needed
+            }
+            else
+            {
+                bulletImage[i].sprite = bulletShadowImage;
+            }
+        }
+    }
 
     #endregion
     

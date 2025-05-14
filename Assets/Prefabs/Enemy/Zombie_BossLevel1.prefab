@@ -563,7 +563,7 @@ GameObject:
   - component: {fileID: 63421939686392466}
   m_Layer: 0
   m_Name: Zombie_BossLevel1
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

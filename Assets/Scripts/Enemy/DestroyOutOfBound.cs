@@ -21,13 +21,5 @@ public class DestroyOutOfBound : MonoBehaviour
             gameObject.SetActive(false);
         }
     }
-
-    private void OnDestroy()
-    {
-        if (isBoss)
-        {
-            gameObject.SetActive(false);
-            SceneManager.LoadScene(0);
-        }
-    }
+    
 }

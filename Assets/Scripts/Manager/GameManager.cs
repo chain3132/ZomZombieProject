@@ -26,15 +26,15 @@ public class GameManager : MonoBehaviour
     public void SetLevel(int level)
     {
         this.level = level;
-        SceneManager.LoadScene(level + 1);
+        SceneManager.LoadScene(level + 2);
     }
     public int GetLevel()
     {
         return this.level;
     }
-    public void SetScore(int score)
+    public void AddScore(int score)
     {
-        this.currentscore = score;
+        this.currentscore += score;
     }
     public int GetScore()
     {
